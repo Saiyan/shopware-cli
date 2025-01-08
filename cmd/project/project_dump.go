@@ -94,7 +94,7 @@ var projectDatabaseDumpCmd = &cobra.Command{
 					"last_name":      "faker.Person.LastName()",
 					"company":        "faker.Person.Name()",
 					"title":          "faker.Person.Name()",
-					"email":          "faker.Internet.Email()",
+					"email":          "faker.Internet.SafeEmail()",
 					"remote_address": "faker.Internet.Ipv4()",
 				},
 				"customer_address": map[string]string{
@@ -111,10 +111,13 @@ var projectDatabaseDumpCmd = &cobra.Command{
 					"provider": "",
 				},
 				"newsletter_recipient": map[string]string{
-					"email":      "faker.Internet.Email()",
+					"email":      "faker.Internet.SafeEmail()",
 					"first_name": "faker.Person.FirstName()",
 					"last_name":  "faker.Person.LastName()",
 					"city":       "faker.Address.City()",
+				},
+				"order":map[string]string{
+					"customer_comment": "faker.Lorem.Paragraphs(1)",
 				},
 				"order_address": map[string]string{
 					"first_name":   "faker.Person.FirstName()",
@@ -131,17 +134,17 @@ var projectDatabaseDumpCmd = &cobra.Command{
 					"last_name":      "faker.Person.LastName()",
 					"company":        "faker.Person.Name()",
 					"title":          "faker.Person.Name()",
-					"email":          "faker.Internet.Email()",
+					"email":          "faker.Internet.SafeEmail()",
 					"remote_address": "faker.Internet.Ipv4()",
 				},
 				"product_review": map[string]string{
-					"email": "faker.Internet.Email()",
+					"email": "faker.Internet.SafeEmail()",
 				},
 				"user": map[string]string{
 					"username":   "faker.Person.Name()",
 					"first_name": "faker.Person.FirstName()",
 					"last_name":  "faker.Person.LastName()",
-					"email":      "faker.Internet.Email()",
+					"email":      "faker.Internet.SafeEmail()",
 				},
 			}
 		}
