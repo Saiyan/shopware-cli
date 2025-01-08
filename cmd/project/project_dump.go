@@ -106,6 +106,8 @@ var projectDatabaseDumpCmd = &cobra.Command{
 					"zipcode":      "faker.Address.PostCode()",
 					"city":         "faker.Address.City()",
 					"phone_number": "faker.Phone.Number()",
+					"additional_address_line1": "''",
+					"additional_address_line2": "''",
 				},
 				"log_entry": map[string]string{
 					"provider": "",
