@@ -117,7 +117,7 @@ var projectDatabaseDumpCmd = &cobra.Command{
 					"city":       "faker.Address.City()",
 				},
 				"order":map[string]string{
-					"customer_comment": "faker.Lorem.Paragraphs(1)",
+					"customer_comment": "''",
 				},
 				"order_address": map[string]string{
 					"first_name":   "faker.Person.FirstName()",
